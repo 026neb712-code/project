@@ -6,277 +6,405 @@
         <h1><a href="tableofcontents.html">Back to Table of Contents Page</a></h1>
         <hr>
         <h1>Chapter 2</h1>
-        <p>Number System and Boolean Logic
-Welcome, NEB Class 11 Computer Science students, to Chapter 3: Number System and Boolean Logic! This chapter is fundamental to understanding how computers process and store information. Mastering these concepts is crucial not only for building a strong foundation in Computer Science but also for excelling in your NEB board examinations. The Curriculum Development Centre (CDC) and National Examination Board (NEB) curriculum for Class 11 emphasizes these topics, and you can expect questions covering number system conversions, Boolean algebra, and logic gates in your theory papers, appearing in Multiple Choice Questions (MCQ), Short Answer Questions (SAQ), and Long Answer Questions (LAQ) sections. Let's dive in and unravel the digital world's language!
+        <hr class="double-line">
+<h2>Number System and Logic Gates</h2>
 
-Introduction to Number Systems
-A number system is a systematic way of representing numbers. In computing, different number systems are used for various purposes, from internal processing to data representation. The value of a digit in a positional number system depends on the digit itself, its position within the number, and the base (or radix) of the number system.
+  <hr>
 
-The main positional number systems we will study are:
+  <h2>Number System, Boolean Algebra, and Digital Logic</h2>
 
-Decimal Number System (Base-10): This is the number system we use daily. It has 10 unique digits (0-9). Each position represents a power of 10.
-Binary Number System (Base-2): This system is the foundation of all digital computers. It uses only two digits: 0 and 1 (bits). Each position represents a power of 2. Computers use binary because electronic circuits have two stable states: ON (1) or OFF (0).
-Octal Number System (Base-8): This system uses eight digits (0-7). Each position represents a power of 8. Octal is often used as a shorthand to represent long binary numbers because three binary digits can be represented by a single octal digit.
-Hexadecimal Number System (Base-16): This system uses sixteen digits (0-9 and A-F, where A represents 10, B represents 11, and so on, up to F for 15). Each position represents a power of 16. Hexadecimal is widely used in computer memory addressing and data representation due to its ability to represent four binary digits with a single hexadecimal digit.
-The base or radix of a number system indicates the total number of unique digits or symbols used in that system.
+  <hr>
 
-Number System Conversions
-Converting numbers between different bases is a critical skill in computer science. Here, we'll cover the most common conversions.
+  <h2>2.1 Number System and Conversion</h2>
+  <p>A number system is a mathematical framework used to represent, count, and perform arithmetic operations on quantitative values. In computer computer systems, positional number systems are utilized where the value of a digit depends on its position within a number, determined by the base or radix ($r$) of the system. The total number of unique digits available in a number system defines its radix.</p>
 
-1. Decimal to Binary, Octal, and Hexadecimal Conversion
-To convert a decimal number to another base, we use the division-remainder method. Divide the decimal number by the target base repeatedly, noting the remainders at each step. The remainders, read from bottom to top, form the number in the new base.
+  <h3>2.1.1 Decimal, Binary, Octal, Hexadecimal Number System & Conversion</h3>
+  
+  <p><b>1. Decimal Number System (Base-10):</b><br>
+  The standard number system used by humans. It uses ten unique symbols: $0, 1, 2, 3, 4, 5, 6, 7, 8, 9$. The positional values are powers of 10 ($10^0, 10^1, 10^2, \dots$).<br>
+  <i>Example:</i> $(254)_{10} = 2 \times 10^2 + 5 \times 10^1 + 4 \times 10^0 = 200 + 50 + 4 = 254$.</p>
 
-Example 1: Decimal to Binary
-Convert (25)10 to binary.
+  <p><b>2. Binary Number System (Base-2):</b><br>
+  The fundamental language of digital computers. It uses only two digits: $0$ (LOW/OFF) and $1$ (HIGH/ON). The positional weights are powers of 2 ($2^0, 2^1, 2^2, \dots$).<br>
+  <i>Example:</i> $(1101)_2 = 1 \times 2^3 + 1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 8 + 4 + 0 + 1 = (13)_{10}$.</p>
 
-Division	Remainder
-25 ÷ 2 = 12	1
-12 ÷ 2 = 6	0
-6 ÷ 2 = 3	0
-3 ÷ 2 = 1	1
-1 ÷ 2 = 0	1
-Reading remainders from bottom to top: (11001)2. So, (25)10 = (11001)2.
+  <p><b>3. Octal Number System (Base-8):</b><br>
+  Uses eight unique digits: $0, 1, 2, 3, 4, 5, 6, 7$. Positional weights are powers of 8 ($8^0, 8^1, 8^2, \dots$). Each octal digit directly represents a 3-bit binary group ($2^3 = 8$).<br>
+  <i>Example:</i> $(357)_8 = 3 \times 8^2 + 5 \times 8^1 + 7 \times 8^0 = 192 + 40 + 7 = (239)_{10}$.</p>
 
-Example 2: Decimal to Octal
-Convert (179)10 to octal.
+  <p><b>4. Hexadecimal Number System (Base-16):</b><br>
+  Uses sixteen unique symbols: $0, 1, 2, 3, 4, 5, 6, 7, 8, 9$ and letters $A, B, C, D, E, F$ (where $A=10, B=11, C=12, D=13, E=14, F=15$). Positional weights are powers of 16 ($16^0, 16^1, 16^2, \dots$). Each hexadecimal digit represents a 4-bit binary group ($2^4 = 16$).<br>
+  <i>Example:</i> $(1AF)_{16} = 1 \times 16^2 + 10 \times 16^1 + 15 \times 16^0 = 256 + 160 + 15 = (431)_{10}$.</p>
 
-Division	Remainder
-179 ÷ 8 = 22	3
-22 ÷ 8 = 2	6
-2 ÷ 8 = 0	2
-Reading remainders from bottom to top: (263)8. So, (179)10 = (263)8.
+  <hr>
 
-Example 3: Decimal to Hexadecimal
-Convert (475)10 to hexadecimal.
+  <h4>Number System Conversion Protocols with Step-by-Step Examples</h4>
 
-Division	Remainder	Hex Equivalent
-475 ÷ 16 = 29	11	B
-29 ÷ 16 = 1	13	D
-1 ÷ 16 = 0	1	1
-Reading remainders from bottom to top: (1DB)16. So, (475)10 = (1DB)16.
+  <p><b>Type A: Decimal to Any Base (Binary, Octal, Hexadecimal)</b><br>
+  <i>Rule:</i> Divide the integer part of the decimal number repeatedly by the target base ($r$) and record the remainders from bottom to top (Least Significant Bit to Most Significant Bit).</p>
 
-2. Binary, Octal, and Hexadecimal to Decimal Conversion
-To convert a number from any base to decimal, multiply each digit by its corresponding positional weight (base raised to the power of its position) and sum the results. Positions are counted from right to left, starting with 0.
+  <p><b>Example 1: Convert Decimal $(45)_{10}$ to Binary $(?)_2$</b></p>
+  <ul>
+    <li>$45 \div 2 = 22$, Remainder = <b>1</b> (LSB)</li>
+    <li>$22 \div 2 = 11$, Remainder = <b>0</b></li>
+    <li>$11 \div 2 = 5$, Remainder = <b>1</b></li>
+    <li>$5 \div 2 = 2$, Remainder = <b>1</b></li>
+    <li>$2 \div 2 = 1$, Remainder = <b>0</b></li>
+    <li>$1 \div 2 = 0$, Remainder = <b>1</b> (MSB)</li>
+  </ul>
+  <p>Reading remainders bottom-to-top: <b>$(45)_{10} = (101101)_2$</b>.</p>
 
-Example 1: Binary to Decimal
-Convert (11011)2 to decimal.
+  <p><b>Example 2: Convert Decimal $(175)_{10}$ to Octal $(?)_8$</b></p>
+  <ul>
+    <li>$175 \div 8 = 21$, Remainder = <b>7</b> (LSB)</li>
+    <li>$21 \div 8 = 2$, Remainder = <b>5</b></li>
+    <li>$2 \div 8 = 0$, Remainder = <b>2</b> (MSB)</li>
+  </ul>
+  <p>Reading remainders bottom-to-top: <b>$(175)_{10} = (257)_8$</b>.</p>
 
-(1 × 24) + (1 × 23) + (0 × 22) + (1 × 21) + (1 × 20)
-= (1 × 16) + (1 × 8) + (0 × 4) + (1 × 2) + (1 × 1)
-= 16 + 8 + 0 + 2 + 1
-= (27)10. So, (11011)2 = (27)10.
+  <p><b>Example 3: Convert Decimal $(957)_{10}$ to Hexadecimal $(?)_{16}$</b></p>
+  <ul>
+    <li>$957 \div 16 = 59$, Remainder = <b>13</b> (which is <b>D</b>)</li>
+    <li>$59 \div 16 = 3$, Remainder = <b>11</b> (which is <b>B</b>)</li>
+    <li>$3 \div 16 = 0$, Remainder = <b>3</b></li>
+  </ul>
+  <p>Reading remainders bottom-to-top: <b>$(957)_{10} = (3BD)_{16}$</b>.</p>
 
-Example 2: Octal to Decimal
-Convert (347)8 to decimal.
+  <p><b>Type B: Any Base to Decimal</b><br>
+  <i>Rule:</i> Multiply each digit by its positional weight ($r^n$) and sum all the products.</p>
 
-(3 × 82) + (4 × 81) + (7 × 80)
-= (3 × 64) + (4 × 8) + (7 × 1)
-= 192 + 32 + 7
-= (231)10. So, (347)8 = (231)10.
+  <p><b>Example 4: Convert Binary $(11011)_2$ to Decimal $(?)_{10}$</b><br>
+  $= (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$<br>
+  $= 16 + 8 + 0 + 2 + 1 = \mathbf{(27)_{10}}$</p>
 
-Example 3: Hexadecimal to Decimal
-Convert (2A5)16 to decimal.
+  <p><b>Example 5: Convert Hexadecimal $(2C5)_{16}$ to Decimal $(?)_{10}$</b><br>
+  $= (2 \times 16^2) + (12 \times 16^1) + (5 \times 16^0)$<br>
+  $= (2 \times 256) + (12 \times 16) + (5 \times 1)$<br>
+  $= 512 + 192 + 5 = \mathbf{(709)_{10}}$</p>
 
-(2 × 162) + (A × 161) + (5 × 160)
-= (2 × 256) + (10 × 16) + (5 × 1)
-= 512 + 160 + 5
-= (677)10. So, (2A5)16 = (677)10.
+  <p><b>Type C: Direct Binary to Octal & Hexadecimal Shortcuts</b></p>
+  <ul>
+    <li><b>Binary to Octal:</b> Group binary digits into sets of 3 from right to left, then convert each group to its single octal digit equivalent.<br>
+    <i>Example:</i> $(11010111)_2 \rightarrow (011)(010)(111)_2 = \mathbf{(327)_8}$.</li>
+    
+    <li><b>Binary to Hexadecimal:</b> Group binary digits into sets of 4 from right to left, then convert each group to its hexadecimal equivalent.<br>
+    <i>Example:</i> $(11010111)_2 \rightarrow (1101)(0111)_2 = (13)(7) = \mathbf{(D7)_{16}}$.</li>
+  </ul>
 
-3. Binary to Octal and Hexadecimal Conversion
-Binary to Octal: Group binary digits in sets of three from right to left, adding leading zeros if necessary. Convert each group of three binary digits into its equivalent octal digit.
+  <h3>2.1.2 Calculation in Binary Addition and Subtraction</h3>
+  <p>Binary arithmetic forms the hardware basis for all processing in the Arithmetic Logic Unit (ALU).</p>
 
-Example: Convert (11010111)2 to octal.
+  <p><b>Rules of Binary Addition:</b></p>
+  <ul>
+    <li>$0 + 0 = 0$ (Sum = 0, Carry = 0)</li>
+    <li>$0 + 1 = 1$ (Sum = 1, Carry = 0)</li>
+    <li>$1 + 0 = 1$ (Sum = 1, Carry = 0)</li>
+    <li>$1 + 1 = 0$ with Carry of <b>1</b> ($10_2 = 2_{10}$)</li>
+    <li>$1 + 1 + 1 = 1$ with Carry of <b>1</b> ($11_2 = 3_{10}$)</li>
+  </ul>
 
-Group: 011 010 111 (added a leading zero)
-Convert: 3   2   7
-So, (11010111)2 = (327)8.
+  <p><b>Example of Binary Addition: Add $(1011)_2$ and $(1101)_2$</b></p>
+  <pre>
+    1 1 1     (Carries)
+      1 0 1 1  (11 in decimal)
+    + 1 1 0 1  (13 in decimal)
+    ----------
+    1 1 0 0 0  (24 in decimal)
+  </pre>
 
-Binary to Hexadecimal: Group binary digits in sets of four from right to left, adding leading zeros if necessary. Convert each group of four binary digits into its equivalent hexadecimal digit.
+  <p><b>Rules of Direct Binary Subtraction (Borrow Method):</b></p>
+  <ul>
+    <li>$0 - 0 = 0$</li>
+    <li>$1 - 0 = 1$</li>
+    <li>$1 - 1 = 0$</li>
+    <li>$0 - 1 = 1$ with a Borrow of 1 from the next higher position (making it $10_2 - 1 = 1$)</li>
+  </ul>
 
-Example: Convert (11010111)2 to hexadecimal.
+  <p><b>Example of Direct Binary Subtraction: Subtract $(0110)_2$ from $(1101)_2$</b></p>
+  <pre>
+      1 1 0 1  (13 in decimal)
+    - 0 1 1 0  (6 in decimal)
+    ----------
+      0 1 1 1  (7 in decimal)
+  </pre>
 
-Group: 1101 0111
-Convert: D   7
-So, (11010111)2 = (D7)16.
+  <h3>2.1.3 One’s and Two’s Complement Methods of Binary Subtraction</h3>
+  <p>In digital circuitry, implementing separate hardware circuits for addition and subtraction is inefficient. Complement arithmetic allows computer systems to perform binary subtraction using standard adder circuits.</p>
 
-4. Octal and Hexadecimal to Binary Conversion
-Octal to Binary: Convert each octal digit into its 3-bit binary equivalent.
+  <h4>1. One's Complement Method</h4>
+  <p>The 1's complement of a binary number is obtained by bitwise inversion: replacing every $0$ with a $1$ and every $1$ with a $0$.</p>
+  
+  <p><b>Subtraction Steps ($A - B$ using 1's Complement):</b></p>
+  <ol>
+    <li>Find the 1's complement of the subtrahend ($B$). Ensure both numbers have equal bit lengths.</li>
+    <li>Add the 1's complement of $B$ to the minuend ($A$).</li>
+    <li>Check for an end-around carry bit generated from the most significant bit:
+      <ul>
+        <li><b>If a Carry occurs:</b> Add the carry back to the LSB (End-Around Carry). The result is positive.</li>
+        <li><b>If NO Carry occurs:</b> Take the 1's complement of the final sum and append a negative sign ($-$ step).</li>
+      </ul>
+    </li>
+  </ol>
 
-Example: Convert (526)8 to binary.
+  <p><b>Example (Case 1: Carry Generated): Perform $1101_2 - 0110_2$ ($13 - 6 = 7$) using 1's Complement</b></p>
+  <ul>
+    <li>Minuend $A = 1101$, Subtrahend $B = 0110$.</li>
+    <li>1's Complement of $B (0110) = 1001$.</li>
+    <li>Add $A + (1's \text{ Comp of } B)$:
+      <pre>
+        1 1 0 1
+      + 1 0 0 1
+      ---------
+     (1)0 0 1 0  --> End-around carry generated!
+      </pre>
+    </li>
+    <li>Add the end-around carry to LSB: $0010 + 1 = \mathbf{00111_2 \text{ or } (+7)_{10}}$.</li>
+  </ul>
 
-Convert: 5 (101)   2 (010)   6 (110)
-Combine: (101010110)2. So, (526)8 = (101010110)2.
+  <h4>2. Two's Complement Method</h4>
+  <p>The 2's complement of a binary number is obtained by adding $1$ to its 1's complement: $\text{2's Complement} = \text{1's Complement} + 1$.</p>
 
-Hexadecimal to Binary: Convert each hexadecimal digit into its 4-bit binary equivalent.
+  <p><b>Subtraction Steps ($A - B$ using 2's Complement):</b></p>
+  <ol>
+    <li>Find the 2's complement of the subtrahend ($B$).</li>
+    <li>Add the 2's complement of $B$ to the minuend ($A$).</li>
+    <li>Check for a carry bit from the MSB position:
+      <ul>
+        <li><b>If a Carry occurs:</b> Discard the carry bit completely. The remaining result is positive.</li>
+        <li><b>If NO Carry occurs:</b> The result is negative. Take the 2's complement of the resulting sum to find its true absolute magnitude.</li>
+      </ul>
+    </li>
+  </ol>
 
-Example: Convert (A3F)16 to binary.
+  <p><b>Example (Case 1: Carry Generated): Perform $1100_2 - 0100_2$ ($12 - 4 = 8$) using 2's Complement</b></p>
+  <ul>
+    <li>Minuend $A = 1100$, Subtrahend $B = 0100$.</li>
+    <li>1's Complement of $B = 1011$.</li>
+    <li>2's Complement of $B = 1011 + 1 = 1100$.</li>
+    <li>Add $A + (2's \text{ Comp of } B)$:
+      <pre>
+        1 1 0 0
+      + 1 1 0 0
+      ---------
+     (1)0 1 0 0  --> Discard the carry bit (1)!
+      </pre>
+    </li>
+    <li>Final Result: $\mathbf{01000_2 \text{ or } (+8)_{10}}$.</li>
+  </ul>
 
-Convert: A (1010)   3 (0011)   F (1111)
-Combine: (101000111111)2. So, (A3F)16 = (101000111111)2.
+  <hr>
 
-Introduction to Boolean Values, Truth Table, Boolean Expression, and Boolean Function
-Boolean Algebra: Named after George Boole, Boolean algebra is a branch of algebra in which the values of the variables are the truth values, true and false, usually denoted 1 and 0 respectively. It is fundamental to the design of digital electronic circuits.
+  <h2>2.2 Logic Function and Boolean Algebra</h2>
 
-Boolean Values: These are the two possible values in Boolean algebra: True (represented as 1) and False (represented as 0). These correspond to the ON and OFF states of electronic switches.
+  <h3>2.2.1 Introduction to Boolean Algebra</h3>
+  <p>Boolean Algebra is a branch of mathematics introduced by English mathematician George Boole in 1854. Unlike elementary algebra, where variables represent real numbers, Boolean algebra works exclusively with two binary logic states: <b>TRUE (1)</b> and <b>FALSE (0)</b>. It provides the mathematical foundation for analyzing, designing, and simplifying digital logic circuits and computer processor architectures.</p>
 
-Truth Table: A truth table is a mathematical table used in logic, specifically in Boolean algebra, to compute the functional values of logical expressions for each combination of input values. It lists all possible input combinations and the corresponding output for a given logical operation or expression.
+  <h3>2.2.2 Introduction to Boolean Values, Truth Table, Boolean Expression, and Boolean Function</h3>
+  <ul>
+    <li><b>Boolean Values:</b> The binary variables that take on one of two discrete values: $1$ (Logic HIGH, VCC, True) or $0$ (Logic LOW, Ground, False).</li>
+    <li><b>Truth Table:</b> A structured mathematical table listing every possible binary combination of input variables alongside the resulting output state of the logical system. For $n$ binary variables, a truth table contains $2^n$ distinct input rows.</li>
+    <li><b>Boolean Expression:</b> An algebraic statement formed using binary variables and logical operators (such as $\text{AND} (\cdot)$, $\text{OR} (+)$, and $\text{NOT} (\overline{A})$). Example: $Y = A \cdot B + \overline{C}$.</li>
+    <li><b>Boolean Function:</b> A mapping relationship defined by a Boolean expression that transforms input binary variables into a single output binary state. Example: $F(A, B, C) = (A + B) \cdot \overline{C}$.</li>
+  </ul>
 
-Boolean Expression: A Boolean expression is an expression formed by combining Boolean variables (which can take values 0 or 1), logical operators (AND, OR, NOT), parentheses, and an equals sign. For example, A + B' is a Boolean expression.
+  <h3>2.2.3 Logic Gates</h3>
+  <p>Logic gates are the physical building blocks of digital electronic circuits. They accept one or more binary input signals and produce a single binary output signal based on specific logical rules.</p>
 
-Boolean Function: A Boolean function, also known as a logic function, is an expression that produces a binary output (0 or 1) based on binary inputs. It defines the relationship between input variables and the output of a logic circuit. For a given set of binary variable values, the function can evaluate to either 0 or 1.
+  <h4>1. AND Gate</h4>
+  <p>Produces a HIGH output ($1$) if and only if <b>all</b> of its inputs are HIGH ($1$).</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = A \cdot B$ (or simply $AB$)</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = A \cdot B$)</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>0</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
 
-Logic Gates
-Logic gates are the basic building blocks of any digital system. They are electronic circuits that perform basic logical functions based on one or more binary inputs and produce a single binary output. Each gate implements a specific Boolean operation.
+  <h4>2. OR Gate</h4>
+  <p>Produces a HIGH output ($1$) if <b>at least one</b> of its inputs is HIGH ($1$).</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = A + B$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = A + B$)</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
 
-Here are the primary logic gates with their symbols, truth tables, and Boolean expressions:
+  <h4>3. NOT Gate (Inverter)</h4>
+  <p>A single-input logic gate that reverses or complements the input logic state.</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = \overline{A}$ or $A'$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>Output ($Y = \overline{A}$)</th></tr>
+    <tr><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td></tr>
+  </table>
 
-1. AND Gate
-The AND gate produces a HIGH output (1) only if all its inputs are HIGH (1). Otherwise, the output is LOW (0). It performs logical multiplication.
+  <h4>4. NAND Gate (Universal Gate)</h4>
+  <p>A combination of an AND gate followed by a NOT gate. Produces a LOW output ($0$) only when all inputs are HIGH ($1$).</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = \overline{A \cdot B}$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = \overline{A \cdot B}$)</th></tr>
+    <tr><td>0</td><td>0</td><td>1</td></tr>
+    <tr><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>1</td><td>0</td></tr>
+  </table>
 
-Symbol:
-AND Gate Symbol
+  <h4>5. NOR Gate (Universal Gate)</h4>
+  <p>A combination of an OR gate followed by a NOT gate. Produces a HIGH output ($1$) only when all inputs are LOW ($0$).</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = \overline{A + B}$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = \overline{A + B}$)</th></tr>
+    <tr><td>0</td><td>0</td><td>1</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>0</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>0</td></tr>
+  </table>
 
-Boolean Expression: Y = A ⋅ B (or Y = AB)
-Truth Table:
-A	B	Y (A ⋅ B)
-0	0	0
-0	1	0
-1	0	0
-1	1	1
-2. OR Gate
-The OR gate produces a HIGH output (1) if at least one of its inputs is HIGH (1). The output is LOW (0) only if all inputs are LOW (0). It performs logical addition.
+  <h4>6. XOR Gate (Exclusive-OR)</h4>
+  <p>Produces a HIGH output ($1$) when the inputs are <b>different</b>, and a LOW output ($0$) when the inputs are identical.</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = A \oplus B = A\overline{B} + \overline{A}B$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = A \oplus B$)</th></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>1</td><td>0</td></tr>
+  </table>
 
-Symbol:
-OR Gate Symbol
+  <h4>7. XNOR Gate (Exclusive-NOR)</h4>
+  <p>A combination of an XOR gate followed by an inverter. Produces a HIGH output ($1$) when inputs are <b>identical</b>.</p>
+  <ul>
+    <li><b>Logic Expression:</b> $Y = \overline{A \oplus B} = AB + \overline{A}\overline{B}$</li>
+  </ul>
+  <table border="1" cellpadding="5">
+    <tr><th>A</th><th>B</th><th>Output ($Y = \overline{A \oplus B}$)</th></tr>
+    <tr><td>0</td><td>0</td><td>1</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>0</td><td>0</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
 
-Boolean Expression: Y = A + B
-Truth Table:
-A	B	Y (A + B)
-0	0	0
-0	1	1
-1	0	1
-1	1	1
-3. NOT Gate (Inverter)
-The NOT gate has only one input and one output. It inverts the input; if the input is HIGH (1), the output is LOW (0), and vice versa.
+  <h3>2.2.4 Laws of Boolean Algebra</h3>
+  <p>Boolean algebra relies on fundamental rules and identities used to simplify complex logical expressions, reducing the number of physical logic gates required in a circuit design.</p>
 
-Symbol:
-NOT Gate Symbol
+  <ul>
+    <li><b>Identity Laws:</b>
+      <ul>
+        <li>$A + 0 = A$</li>
+        <li>$A \cdot 1 = A$</li>
+      </ul>
+    </li>
 
-Boolean Expression: Y = A' (or Y = A)
-Truth Table:
-A	Y (A')
-0	1
-1	0
-4. NAND Gate (NOT-AND)
-The NAND gate is a combination of an AND gate and a NOT gate. Its output is LOW (0) only if all inputs are HIGH (1); otherwise, the output is HIGH (1).
+    <li><b>Null (Annulment) Laws:</b>
+      <ul>
+        <li>$A + 1 = 1$</li>
+        <li>$A \cdot 0 = 0$</li>
+      </ul>
+    </li>
 
-Symbol:
-NAND Gate Symbol
+    <li><b>Idempotent Laws:</b>
+      <ul>
+        <li>$A + A = A$</li>
+        <li>$A \cdot A = A$</li>
+      </ul>
+    </li>
 
-Boolean Expression: Y = (A ⋅ B)'
-Truth Table:
-A	B	Y (A ⋅ B)'
-0	0	1
-0	1	1
-1	0	1
-1	1	0
-5. NOR Gate (NOT-OR)
-The NOR gate is a combination of an OR gate and a NOT gate. Its output is HIGH (1) only if all inputs are LOW (0); otherwise, the output is LOW (0).
+    <li><b>Complement Laws:</b>
+      <ul>
+        <li>$A + \overline{A} = 1$</li>
+        <li>$A \cdot \overline{A} = 0$</li>
+        <li>$\overline{(\overline{A})} = A$ (Double Negation / Involution)</li>
+      </ul>
+    </li>
 
-Symbol:
-NOR Gate Symbol
+    <li><b>Commutative Laws:</b>
+      <ul>
+        <li>$A + B = B + A$ (OR operation is order-independent)</li>
+        <li>$A \cdot B = B \cdot A$ (AND operation is order-independent)</li>
+      </ul>
+    </li>
 
-Boolean Expression: Y = (A + B)'
-Truth Table:
-A	B	Y (A + B)'
-0	0	1
-0	1	0
-1	0	0
-1	1	0
-6. XOR Gate (Exclusive-OR)
-The XOR gate produces a HIGH output (1) if an odd number of inputs are HIGH (1). For two inputs, it produces a HIGH output if the inputs are different.
+    <li><b>Associative Laws:</b>
+      <ul>
+        <li>$(A + B) + C = A + (B + C)$</li>
+        <li>$(A \cdot B) \cdot C = A \cdot (B \cdot C)$</li>
+      </ul>
+    </li>
 
-Symbol:
-XOR Gate Symbol
+    <li><b>Distributive Laws:</b>
+      <ul>
+        <li>$A \cdot (B + C) = (A \cdot B) + (A \cdot C)$</li>
+        <li>$A + (B \cdot C) = (A + B) \cdot (A + C)$</li>
+      </ul>
+    </li>
 
-Boolean Expression: Y = A ⊕ B (or Y = A'B + AB')
-Truth Table:
-A	B	Y (A ⊕ B)
-0	0	0
-0	1	1
-1	0	1
-1	1	0
-7. XNOR Gate (Exclusive-NOR)
-The XNOR gate is the complement of the XOR gate. It produces a HIGH output (1) if an even number of inputs are HIGH (1). For two inputs, it produces a HIGH output if the inputs are the same.
+    <li><b>De Morgan's Theorems:</b>
+      <ul>
+        <li><b>First Law:</b> $\overline{A \cdot B} = \overline{A} + \overline{B}$ (The complement of a product equals the sum of the complements)</li>
+        <li><b>Second Law:</b> $\overline{A + B} = \overline{A} \cdot \overline{B}$ (The complement of a sum equals the product of the complements)</li>
+      </ul>
+    </li>
+  </ul>
 
-Symbol:
-XNOR Gate Symbol
+  <h3>2.2.5 Statement and Verification of Laws of Boolean Algebra Using Truth Tables</h3>
 
-Boolean Expression: Y = (A ⊕ B)' (or Y = AB + A'B')
-Truth Table:
-A	B	Y ((A ⊕ B)')
-0	0	1
-0	1	0
-1	0	0
-1	1	1
-Laws of Boolean Algebra
-Boolean algebra has several laws that help simplify Boolean expressions and design efficient logic circuits. These laws are similar to algebraic laws but apply to binary variables and logical operations.
+  <h4>Verification 1: Distributive Law $A + (B \cdot C) = (A + B) \cdot (A + C)$</h4>
+  <p>To verify this law, build a truth table for all $2^3 = 8$ combinations of $A, B, C$ and compare the output columns for LHS and RHS.</p>
 
-Let A, B, and C be Boolean variables (0 or 1).
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>A</th><th>B</th><th>C</th>
+      <th>B · C</th>
+      <th>LHS: A + (B · C)</th>
+      <th>A + B</th>
+      <th>A + C</th>
+      <th>RHS: (A + B) · (A + C)</th>
+    </tr>
+    <tr><td>0</td><td>0</td><td>0</td> <td>0</td> <td><b>0</b></td> <td>0</td><td>0</td> <td><b>0</b></td></tr>
+    <tr><td>0</td><td>0</td><td>1</td> <td>0</td>  productive <td><b>0</b></td> <td>0</td><td>1</td> <td><b>0</b></td></tr>
+    <tr><td>0</td><td>1</td><td>0</td> <td>0</td> <td><b>0</b></td> <td>1</td><td>0</td> <td><b>0</b></td></tr>
+    <tr><td>0</td><td>1</td><td>1</td> <td>1</td> <td><b>1</b></td> <td>1</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>0</td><td>0</td> <td>0</td> <td><b>1</b></td>  population <td>1</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>0</td><td>1</td> <td>0</td> <td><b>1</b></td> <td>1</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>1</td><td>0</td> <td>0</td> <td><b>1</b></td> <td>1</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>1</td><td>1</td>  <td>1</td> <td><b>1</b></td> <td>1</td><td>1</td> <td><b>1</b></td></tr>
+  </table>
+  <p><b>Conclusion:</b> Since the column for <b>LHS</b> $A + (B \cdot C)$ is identical to the column for <b>RHS</b> $(A + B) \cdot (A + C)$ across all 8 input combinations, the Distributive Law is verified.</p>
 
-1. Commutative Laws
-These laws state that the order of operands does not affect the result.
+  <h4>Verification 2: De Morgan's First Law $\overline{A \cdot B} = \overline{A} + \overline{B}$</h4>
 
-AND: A ⋅ B = B ⋅ A
-OR: A + B = B + A
-2. Associative Laws
-These laws state that the grouping of operands does not affect the result when performing the same operation multiple times.
-
-AND: (A ⋅ B) ⋅ C = A ⋅ (B ⋅ C)
-OR: (A + B) + C = A + (B + C)
-3. Distributive Laws
-These laws describe how operations distribute over each other.
-
-AND over OR: A ⋅ (B + C) = (A ⋅ B) + (A ⋅ C)
-OR over AND: A + (B ⋅ C) = (A + B) ⋅ (A + C)
-4. De Morgan's Laws
-De Morgan's laws are crucial for simplifying expressions involving complements (NOT operations).
-
-Law 1: (A + B)' = A' ⋅ B' (The complement of a sum is the product of the complements.)
-Law 2: (A ⋅ B)' = A' + B' (The complement of a product is the sum of the complements.)
-Other important laws and identities:
-
-Identity Law:
-A + 0 = A
-A ⋅ 1 = A
-Null Law:
-A + 1 = 1
-A ⋅ 0 = 0
-Idempotent Law:
-A + A = A
-A ⋅ A = A
-Complement Law:
-A + A' = 1
-A ⋅ A' = 0
-Involution Law (Double Complement): (A')' = A
-Absorption Law:
-A + (A ⋅ B) = A
-A ⋅ (A + B) = A
-Logic Circuits
-Logic circuits (or digital circuits) are physical implementations of Boolean functions using logic gates. They are the fundamental components of digital electronics, such as microprocessors, memory, and other digital devices. Designing a logic circuit involves converting a Boolean expression into a diagram using standard logic gate symbols.
-
-Example: Draw a logic circuit for the Boolean expression Y = A ⋅ B + C'.
-
-Here's how to break it down:
-
-Identify the inputs: A, B, C.
-Identify the operations: AND (A ⋅ B), NOT (C'), OR (result of A ⋅ B and C').
-Draw the gates in sequence:
-An AND gate for A and B.
-A NOT gate for C.
-An OR gate for the output of the AND gate and the output of the NOT gate.
-Logic Circuit Example
-
-In this circuit, the output of the AND gate is A ⋅ B. The output of the NOT gate is C'. These two outputs then feed into the OR gate, producing the final output Y = A ⋅ B + C'.</p>
-    </body>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>A</th><th>B</th>
+      <th>A · B</th>
+      <th>LHS: $\overline{A \cdot B}$</th>
+      <th>$\overline{A}$</th>
+      <th>$\overline{B}$</th>
+      <th>RHS: $\overline{A} + \overline{B}$</th>
+    </tr>
+    <tr><td>0</td><td>0</td> <td>0</td> <td><b>1</b></td> <td>1</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>0</td><td>1</td> <td>0</td> <td><b>1</b></td> <td>1</td><td>0</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>0</td> <td>0</td> <td><b>1</b></td> <td>0</td><td>1</td> <td><b>1</b></td></tr>
+    <tr><td>1</td><td>1</td> <td>1</td>  productive <td><b>0</b></td> <td>0</td><td>0</td> <td><b>0</b></td></tr>
+  </table>
+  <p><b>Conclusion:</b> The truth table column for <b>LHS</b> ($\overline{A \cdot B}$) matches the column for <b>RHS</b> ($\overline{A} + \overline{B}$), verifying De Morgan's First Law.</p>
+</body>
+   
+<h2><a href="chapter3.html">Go to chapter 3</a></h2>
+</body>
 </html>

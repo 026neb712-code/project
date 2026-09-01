@@ -6,77 +6,387 @@
         <h1><a href="tableofcontents.html">Back to Table of Contents Page</a></h1>
         <hr>
         <h1>Chapter 5</h1>
-        <p>Programming Concepts and C Programming Basics
-Welcome, NEB Class 11 Computer Science students! In this chapter, we will embark on an exciting journey into the world of programming. Understanding programming concepts and mastering the basics of C programming is crucial for your academic success and future career prospects in the rapidly evolving field of Information and Communication Technology (ICT) in Nepal. This unit, "Programming Concepts and C Programming Basics," is a foundational component of your NEB Class 11 Computer Science syllabus (Curriculum 2076 BS) and carries significant weight in your board examinations. A strong grasp of these topics will not only help you score well but also provide a solid base for more advanced computer science studies. We will cover everything from fundamental ideas like algorithms and flowcharts to the core elements of C language, including data types, operators, control statements, arrays, and string functions, all tailored to the depth and style expected by the Curriculum Development Centre (CDC) and National Examination Board (NEB).
+        <hr class="double-line">
+<<h1>CHAPTER 5: PROGRAMMING CONCEPTS &amp; C PROGRAMMING</h1>
 
-Introduction to Programming Concepts
-Programming is the process of writing instructions that a computer can understand and execute to perform a specific task. These instructions are written in a programming language. The goal of programming is to solve problems efficiently using computational logic.
+  <h2>5.1 Programming Concepts</h2>
 
-Key concepts in programming include:
+  <h3>5.1.1 Introduction to Programming Languages</h3>
+  <p>A <b>programming language</b> is a standardized set of rules, syntax, and symbols used to instruct a computer system to perform specific tasks. It acts as a bridge between human logic and the machine's underlying hardware execution pipeline.</p>
 
-Program: A set of instructions given to a computer to perform a specific task.
-Programming Language: A formal language comprising a set of instructions used to produce computer programs. Examples include C, C++, Java, Python.
-Programmer: An individual who writes computer programs.
-Source Code: The program written by a programmer in a high-level language.
-Object Code (Machine Code): The translated version of the source code into a machine-understandable format (binary code).
-Compiler: A software that translates an entire high-level language program into machine code before execution. C is a compiled language.
-Interpreter: A software that translates and executes high-level language programs line by line.
-Assembler: A software that translates assembly language programs into machine code.
-Algorithms and Flowcharts
-Before writing a program, it's essential to plan the solution logically. Algorithms and flowcharts are two common tools used for this purpose.
+  <hr>
 
-Algorithm
-An algorithm is a step-by-step procedure for solving a given problem. It is a finite set of unambiguous instructions that, when followed, accomplishes a particular task. Algorithms are independent of any programming language.
+  <h3>5.1.2 Low-Level, High-Level, and 4GL Programming Languages</h3>
+  <ul>
+    <li><b>Low-Level Languages (1GL &amp; 2GL):</b> Hardware-dependent languages providing minimal abstraction.
+      <ul>
+        <li><i>Machine Language (1GL):</i> Expressed purely in binary (0s and 1s). Executed directly by the CPU without translation.</li>
+        <li><i>Assembly Language (2GL):</i> Uses human-readable mnemonics (e.g., <code>MOV</code>, <code>ADD</code>, <code>SUB</code>) instead of raw binary strings. Requires an assembler.</li>
+      </ul>
+    </li>
+    <li><b>High-Level Languages (3GL):</b> Machine-independent languages using natural English keywords and mathematical notation (e.g., C, C++, Java, Python). They require compilers or interpreters.</li>
+    <li><b>Fourth-Generation Languages (4GL):</b> Non-procedural, domain-specific languages designed to reduce programming effort by specifying <i>what</i> output is needed rather than <i>how</i> to compute it (e.g., SQL, MATLAB, SAS).</li>
+  </ul>
 
-Characteristics of a good algorithm:
+  <hr>
 
-Finiteness: An algorithm must terminate after a finite number of steps.
-Definiteness: Each step must be precisely defined and unambiguous.
-Input: An algorithm must have zero or more well-defined inputs.
-Output: An algorithm must have one or more well-defined outputs.
-Effectiveness: Each step must be simple enough to be executed in a finite amount of time.
-Example: Algorithm to find the sum of two numbers.
+  <h3>5.1.3 Compiler, Interpreter, and Assembler</h3>
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th>Translator</th>
+        <th>Input Code</th>
+        <th>Execution Mechanism</th>
+        <th>Error Detection</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Assembler</b></td>
+        <td>Assembly Language</td>
+        <td>Converts mnemonics directly into absolute machine binary.</td>
+        <td>Low-level syntax errors.</td>
+      </tr>
+      <tr>
+        <td><b>Compiler</b></td>
+        <td>High-Level Language</td>
+        <td>Translates entire source code into machine code in one pass, producing an executable object file.</td>
+        <td>Reports all errors after compilation completes.</td>
+      </tr>
+      <tr>
+        <td><b>Interpreter</b></td>
+        <td>High-Level Language</td>
+        <td>Translates and executes source code line-by-line in real time without generating a standalone executable.</td>
+        <td>Stops execution at the first line containing an error.</td>
+      </tr>
+    </tbody>
+  </table>
 
-START
-Declare three integer variables: num1, num2, sum.
-Read the value of num1 from the user.
-Read the value of num2 from the user.
-Calculate sum = num1 + num2.
-Display the value of sum.
-STOP
-Flowchart
-A flowchart is a graphical representation of an algorithm. It uses standard symbols to depict the sequence of operations to be performed to solve a problem. Flowcharts are helpful for visualizing the program's logic and flow.
+  <hr>
 
-Introduction to C Programming Language
-C is a powerful, general-purpose, structured programming language developed by Dennis Ritchie at Bell Laboratories in the early 1970s. It is a middle-level language, meaning it combines features of both high-level and low-level languages. C is widely used for system programming (like operating systems, compilers) and application programming due to its efficiency and flexibility.
+  <h3>5.1.4 Syntax, Semantic, and Runtime Errors</h3>
+  <ul>
+    <li><b>Syntax Error:</b> Violations of the language's grammatical rules (e.g., missing semicolons, unmatched parentheses). Caught during compilation.</li>
+    <li><b>Semantic (Logical) Error:</b> Code runs to completion without crashing, but yields incorrect outputs due to flawed logic (e.g., writing <code>area = width + height</code> instead of multiplication).</li>
+    <li><b>Runtime Error:</b> Flaws triggered during program execution, causing crash events (e.g., division by zero, accessing out-of-bounds memory addresses).</li>
+  </ul>
 
-Features of C programming language:
+  <hr>
 
-Structured Language: C supports structured programming, allowing programs to be broken down into smaller, manageable functions or blocks.
-Middle-level Language: It provides high-level features for ease of programming and low-level features for direct memory manipulation.
-Portability: C programs can be compiled and run on different hardware platforms with minimal changes.
-Rich Library Functions: C comes with a rich set of built-in functions for various tasks.
-Memory Management: C allows direct memory access using pointers, offering fine-grained control over memory.
-Fast Execution Speed: Compiled C programs are generally very fast.
-Explanation of the structure:
+  <h3>5.1.5 Control Structures: Sequence, Selection, and Iteration</h3>
+  <ul>
+    <li><b>Sequence:</b> Default execution flow where statements execute step-by-step from top to bottom.</li>
+    <li><b>Selection (Branching):</b> Executes specific code blocks conditionally based on logical criteria (e.g., <code>if-else</code>, <code>switch</code>).</li>
+    <li><b>Iteration (Looping):</b> Repeats a code block until a specified termination condition becomes false (e.g., <code>while</code>, <code>for</code>).</li>
+  </ul>
 
-Preprocessor Directives: Lines starting with # are preprocessor directives. They are processed before the actual compilation. #include <stdio.h> tells the compiler to include the standard input/output header file, which contains declarations for functions like printf() and scanf().
-Global Variable Declaration (Optional): Variables declared outside any function are global and can be accessed from anywhere in the program.
-Function Declaration (Optional): Declaring a function before its definition (also called a prototype) informs the compiler about the function's name, return type, and parameters.
-main() Function: This is the most important part of any C program. Program execution always begins and ends with the main() function. Every C program must have exactly one main() function.
-Local Variable Declaration: Variables declared inside a function are local to that function and can only be accessed within it.
-Executable Statements: These are the instructions that perform the actual tasks of the program. Each statement typically ends with a semicolon (;).
-return 0;: In the main() function, return 0; indicates that the program executed successfully. Any non-zero value usually indicates an error.
-User-defined Functions (Optional): Programmers can create their own functions to perform specific tasks, promoting modularity and reusability.
-Comments: Text enclosed between /* ... */ or starting with // are comments. They are ignored by the compiler and are used to explain the code for better understanding.
-Data Types, Variables, and Constants
-To work with data in C, you need to understand data types, variables, and constants.
+  <hr>
 
-Data Types
-Data types specify the type of data a variable can hold, such as integers, floating-point numbers, or characters. They also determine the amount of memory allocated for the variable.
+  <h3>5.1.6 Program Design Tools – Algorithm, Flowchart, and Pseudocode</h3>
+  <p><b>Problem:</b> Compute the factorial of a given positive integer $N$.</p>
 
+  <h4>1. Algorithm</h4>
+  <pre><code>Step 1: Start
+Step 2: Read integer input N
+Step 3: Initialize fact = 1, i = 1
+Step 4: If i > N, jump to Step 7
+Step 5: Compute fact = fact * i
+Step 6: Increment i = i + 1, jump to Step 4
+Step 7: Print fact
+Step 8: Stop</code></pre>
 
+  <h4>2. Pseudocode</h4>
+  <pre><code>BEGIN
+  READ N
+  SET fact = 1
+  FOR i = 1 TO N DO
+    fact = fact * i
+  END FOR
+  PRINT fact
+END</code></pre>
 
-</p>
-    </body>
+  <h4>3. Flowchart Representation (Textual Model)</h4>
+  <pre><code>[Start] ──> [Input N] ──> [fact = 1, i = 1] ──> < Is i <= N? >
+                                                   │       │
+                                                 (Yes)    (No)
+                                                   │       │
+                                                   ▼       ▼
+                                         [fact = fact * i] [Print fact]
+                                         [i = i + 1]       │
+                                                   │       ▼
+                                                   └───> [Stop]</code></pre>
+
+  <hr>
+
+  <h3>5.1.7 Absolute Binary, BCD, ASCII, and Unicode</h3>
+  <ul>
+    <li><b>Absolute Binary:</b> Pure positional base-2 numerical representation using bits <code>0</code> and <code>1</code>.</li>
+    <li><b>Binary-Coded Decimal (BCD):</b> Encodes each decimal digit ($0$ through $9$) separately into a fixed 4-bit binary nibble (e.g., decimal $25_{10}$ becomes <code>0010 0101</code> in BCD).</li>
+    <li><b>ASCII (American Standard Code for Information Interchange):</b> A 7-bit character encoding standard supporting up to $128$ characters ($2^7$), limited primarily to English characters and basic symbols.</li>
+    <li><b>Unicode:</b> A universal character encoding standard (e.g., UTF-8, UTF-16) designed to represent scripts, languages, and symbols across all global writing systems (supporting over $140,000$ characters).</li>
+  </ul>
+
+  <hr>
+
+  <h2>5.2 C Programming Language</h2>
+
+  <h3>5.2.1 Introduction and Features of C</h3>
+  <p>Developed by Dennis Ritchie at Bell Labs in 1972, <b>C</b> is a structured, procedural high-level programming language renowned for its balance of abstraction and direct memory manipulation capability via pointers.</p>
+  <ul>
+    <li><b>Key Features:</b> Mid-level control capabilities, modularity via functions, extensive built-in operators, fast execution speed, and high portability across platform architectures.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.2 Structure of a C Program</h3>
+  <pre><code>/* 1. Documentation Section */
+// Program to compute area of a circle
+
+/* 2. Link / Preprocessor Section */
+#include &lt;stdio.h&gt;
+
+/* 3. Definition Section */
+#define PI 3.14159
+
+/* 4. Global Declaration Section */
+float area;
+
+/* 5. Main Function Section */
+int main(void) {
+    /* Local Variable Declarations */
+    float radius = 5.0;
+
+    /* Executable Statements */
+    area = PI * radius * radius;
+    printf("Calculated Area: %.2f\n", area);
+
+    /* Return Statement */
+    return 0;
+}
+
+/* 6. User-Defined Functions Section (If applicable) */</code></pre>
+
+  <hr>
+
+  <h3>5.2.3 C Preprocessor and Header Files</h3>
+  <p>The <b>C Preprocessor</b> is a macro processor that scans source code before compilation begins. Lines beginning with <code>#</code> are preprocessor directives.</p>
+  <ul>
+    <li><code>#include &lt;stdio.h&gt;</code>: Copies standard Input/Output library declarations into the program.</li>
+    <li><code>#define MACRO_NAME value</code>: Substitutes macro tokens throughout the file before compilation.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.4 Character Set, 5.2.5 Comments, 5.2.6 Tokens, Keywords, and Identifiers</h3>
+  <ul>
+    <li><b>Character Set:</b> Letters (A-Z, a-z), Digits (0-9), Special Symbols (<code>+</code>, <code>-</code>, <code>*</code>, <code>&amp;</code>, <code>%</code>), and Whitespace characters.</li>
+    <li><b>Comments:</b> Ignored by the compiler.
+      <ul>
+        <li>Single-line comment: <code>// comment</code></li>
+        <li>Multi-line comment: <code>/* comment */</code></li>
+      </ul>
+    </li>
+    <li><b>Tokens:</b> The smallest individual units in a program (Keywords, Identifiers, Constants, Strings, Special Symbols, Operators).</li>
+    <li><b>Keywords:</b> Reserved words with predefined meanings (32 standard keywords in C89, e.g., <code>int</code>, <code>return</code>, <code>if</code>, <code>volatile</code>).</li>
+    <li><b>Identifiers:</b> User-defined names for variables, functions, and arrays. Must begin with a letter or underscore.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.7 Basic Data Types, 5.2.8 Constants &amp; Variables, 5.2.9 Format Specifiers</h3>
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th>Data Type</th>
+        <th>Keyword</th>
+        <th>Typical Storage Size</th>
+        <th>Format Specifier</th>
+        <th>Sample Range / Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Character</td>
+        <td><code>char</code></td>
+        <td>1 Byte</td>
+        <td><code>%c</code></td>
+        <td>'A', 'z' (-128 to 127)</td>
+      </tr>
+      <tr>
+        <td>Integer</td>
+        <td><code>int</code></td>
+        <td>2 or 4 Bytes</td>
+        <td><code>%d</code> / <code>%i</code></td>
+        <td>-32,768 to 32,767 (16-bit)</td>
+      </tr>
+      <tr>
+        <td>Single-Precision Floating Point</td>
+        <td><code>float</code></td>
+        <td>4 Bytes</td>
+        <td><code>%f</code></td>
+        <td>$3.4 \times 10^{-38}$ to $3.4 \times 10^{38}$</td>
+      </tr>
+      <tr>
+        <td>Double-Precision Floating Point</td>
+        <td><code>double</code></td>
+        <td>8 Bytes</td>
+        <td><code>%lf</code></td>
+        <td>$1.7 \times 10^{-308}$ to $1.7 \times 10^{308}$</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3>5.2.10 Simple and Compound Statements</h3>
+  <ul>
+    <li><b>Simple Statement:</b> A single instruction ending with a semicolon: <code>x = 10;</code></li>
+    <li><b>Compound Statement (Block):</b> A group of statements enclosed in curly braces <code>{ ... }</code> executed sequentially.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.11 Operators and Expressions</h3>
+  <p>C provides rich support for operator-driven expressions:</p>
+  <ul>
+    <li><b>Arithmetic:</b> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> (Modulo, yields remainder).</li>
+    <li><b>Relational:</b> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> (Evaluates to 1 [true] or 0 [false]).</li>
+    <li><b>Logical:</b> <code>&amp;&amp;</code> (AND), <code>||</code> (OR), <code>!</code> (NOT).</li>
+    <li><b>Assignment:</b> <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code></li>
+    <li><b>Unary:</b> <code>++</code> (Increment), <code>--</code> (Decrement), <code>sizeof</code></li>
+    <li><b>Conditional (Ternary):</b> <code>expression1 ? expression2 : expression3</code></li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.12 Input/Output (I/O) Functions</h3>
+  <ul>
+    <li><b>Formatted I/O:</b> <code>printf("format string", variables...)</code>, <code>scanf("format string", &amp;variables...)</code></li>
+    <li><b>Unformatted I/O:</b> <code>getchar()</code>, <code>putchar()</code>, <code>gets()</code> (deprecated), <code>puts()</code>.</li>
+  </ul>
+
+  <hr>
+
+  <h3>5.2.13 Selection Control Statements</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score = 85;
+
+    // if-else-if ladder
+    if (score >= 90) {
+        printf("Grade A\n");
+    } else if (score >= 80) {
+        printf("Grade B\n");
+    } else {
+        printf("Grade C\n");
+    }
+
+    // Switch case selection
+    int category = 2;
+    switch (category) {
+        case 1:
+            printf("Category 1 Selected\n");
+            break;
+        case 2:
+            printf("Category 2 Selected\n");
+            break;
+        default:
+            printf("Invalid Category\n");
+    }
+
+    return 0;
+}</code></pre>
+
+  <hr>
+
+  <h3>5.2.14 Iteration Control Statements (Loops)</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i;
+
+    // 1. For Loop
+    for (i = 0; i &lt; 3; i++) {
+        printf("For Loop i = %d\n", i);
+    }
+
+    // 2. While Loop (Entry-Controlled)
+    int j = 0;
+    while (j &lt; 3) {
+        printf("While Loop j = %d\n", j);
+        j++;
+    }
+
+    // 3. Do-While Loop (Exit-Controlled)
+    int k = 0;
+    do {
+        printf("Do-While Loop k = %d\n", k);
+        k++;
+    } while (k &lt; 3);
+
+    return 0;
+}</code></pre>
+
+  <hr>
+
+  <h3>5.2.15 Array Processing &amp; Matrix Operations</h3>
+  <p>An <b>array</b> is a fixed-size collection of homogenous elements stored in contiguous memory locations.</p>
+
+  <h4>2D Matrix Addition and Subtraction Example</h4>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int A[2][2] = {{5, 8}, {3, 4}};
+    int B[2][2] = {{1, 2}, {7, 3}};
+    int Sum[2][2], Diff[2][2];
+
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; 2; j++) {
+            Sum[i][j] = A[i][j] + B[i][j];
+            Diff[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+    printf("Sum Matrix cell [0][0]: %d\n", Sum[0][0]);   // Outputs 6
+    printf("Diff Matrix cell [0][0]: %d\n", Diff[0][0]); // Outputs 4
+
+    return 0;
+}</code></pre>
+
+  <hr>
+
+  <h3>5.2.16 String Manipulation and String Functions</h3>
+  <p>In C, a <b>string</b> is a one-dimensional array of characters terminated by a null character (<code>'\0'</code>).</p>
+
+  <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void) {
+    char str1[50] = "Hello";
+    char str2[50] = "World";
+    char temp[50];
+
+    // 1. strlen() - Length of string
+    printf("Length of str1: %lu\n", strlen(str1)); // 5
+
+    // 2. strcpy() - Copy string
+    strcpy(temp, str1);
+
+    // 3. strcat() - Concatenate strings
+    strcat(str1, str2); // str1 becomes "HelloWorld"
+    printf("Concatenated: %s\n", str1);
+
+    // 4. strcmp() - Compare strings lexicographically
+    if (strcmp(temp, "Hello") == 0) {
+        printf("Strings are identical\n");
+    }
+
+    // 5. Non-standard extensions (strrev, strlwr, strupr)
+    // Note: strlwr/strupr/strrev exist in standard string.h on POSIX/GNU platforms via lowercase loops:
+    return 0;
+}</code></pre>
+   <hr>
+<h2><a href="chapter6.html">Go to chapter 6</a></h2>
+</body>
 </html>

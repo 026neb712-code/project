@@ -6,153 +6,297 @@
         <h1><a href="tableofcontents.html">Back to Table of Contents Page</a></h1>
         <hr>
         <h1>Chapter</h1>
-        <p>
-            Web Technology - I
-            <hr>
-Welcome, NEB Class 11 Computer Science students! In this chapter, 'Web Technology - I', we will embark on an exciting journey into the world of the internet and web development. Understanding web technology is crucial in today's digital age, not only for navigating the vast online landscape but also for building your own digital presence. This unit is an important part of your NEB board examination, and mastering these concepts will help you score well in both theoretical and practical assessments. We will cover essential topics from web browsers to the basics of creating web pages using HTML and styling them with CSS, all aligned with the CDC/NEB curriculum to prepare you thoroughly for your exams.
+       <hr class="double-line">
 
-Web Browsers and Search Engines
-The internet is a vast network of computers, and to access the information available on it, we use specific software. These are primarily web browsers and search engines.
+  <h1>CHAPTER 6: WEB TECHNOLOGY I</h1>
 
-Web Browser: A web browser is an application software that allows users to access, retrieve, and view information and content on the World Wide Web (WWW). It acts as an interface between the user and the web server. When you type a website address (URL) or click a link, the browser sends a request to the web server, which then sends back the requested web page. The browser interprets the code (like HTML, CSS, JavaScript) and displays the content in a human-readable format.
+  <h2>6.1 Introduction to Web Development</h2>
+  <p><b>Web Development</b> refers to the process of building, creating, and maintaining websites and web applications delivered over the internet via HTTP/HTTPS protocols.</p>
 
-Common Web Browsers:
+  <hr>
 
-Google Chrome
-Mozilla Firefox
-Microsoft Edge
-Apple Safari
-Opera
-Search Engine: A search engine is a web-based tool that enables users to locate information on the World Wide Web. Its main purpose is to search for information on the internet. Search engines are software programs that search for websites based on keywords typed in by the user. They go through their database of information to locate the information you are looking for.
+  <h2>6.2 Web Browsers and Search Engines</h2>
+  <ul>
+    <li><b>Web Browser:</b> A client-side software application that requests, fetches, parses, and renders HTML/CSS/JS resources from web servers (e.g., Google Chrome, Mozilla Firefox, Apple Safari).</li>
+    <li><b>Search Engine:</b> A web-based database service that uses automated crawlers (bots) to index web pages, allowing users to discover content using keyword queries (e.g., Google, Bing, DuckDuckGo).</li>
+  </ul>
 
-How a Search Engine Works:
+  <hr>
 
-Crawling: Search engine bots (also called spiders or crawlers) systematically browse the web, discovering new and updated web pages.
-Indexing: The information gathered by crawlers is then processed and stored in a massive database, creating an index. This index is like a giant library catalog.
-Searching: When a user enters a query, the search engine quickly searches its index for relevant pages and ranks them based on various algorithms to provide the most accurate results.
-Popular Search Engines:
+  <h2>6.3 Overview of Internet &amp; Web Technologies</h2>
+  <ul>
+    <li><b>DNS (Domain Name System):</b> Translates human-readable domain names (<code>example.com</code>) into numeric IP addresses (<code>192.0.2.1</code>).</li>
+    <li><b>HTTP/HTTPS:</b> Hypertext Transfer Protocol (Secure) handles data exchange between client and server interfaces.</li>
+  </ul>
 
-Google
-Bing
-Yahoo!
-DuckDuckGo
-Overview of Internet and Web Technology
-Internet: The Internet is a global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to link billions of devices worldwide. It is a "network of networks" that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies.
+  <hr>
 
-Key Concepts of the Internet:
+  <h2>6.4 Content Management Systems (CMS)</h2>
+  <p>A <b>Content Management System (CMS)</b> is a software application that enables users to build, modify, and manage digital content on a website without writing code from scratch (e.g., WordPress, Joomla, Drupal).</p>
 
-World Wide Web (WWW): Often confused with the internet, the WWW is a system of interconnected hypertext documents and other web resources that are accessed via the internet. It's an application built on top of the internet.
-Client-Server Model: The internet primarily operates on a client-server model. A client (your web browser) requests information or services from a server (a powerful computer hosting websites).
-Protocols: These are rules that govern how data is transmitted over the internet. Examples include HTTP (Hypertext Transfer Protocol), HTTPS (Secure HTTP), FTP (File Transfer Protocol), and TCP/IP (Transmission Control Protocol/Internet Protocol).
-IP Address: A unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.
-Domain Name System (DNS): A hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It translates human-readable domain names (like google.com) into IP addresses.
-Web Technology: Web technology broadly refers to the tasks associated with developing websites for hosting via the internet or intranet. It encompasses the various tools, languages, and protocols used to create and maintain websites and web applications. This can range from developing static pages to complex web-based applications like e-commerce or social network websites.
+  <hr>
 
-Content Management System (CMS)
-A Content Management System (CMS) is an application that allows users to create, manage, and modify content on a website without the need for specialized technical knowledge or coding skills. It simplifies the process of web content creation, workflow management, and publishing.
+  <h2>6.4 HTML: The Language of the Web</h2>
 
-Key Features of a CMS:
+  <h3>6.4.1 Objectives &amp; 6.4.2 Structure of HTML</h3>
+  <p>HTML (HyperText Markup Language) is the standard markup language used to structure web documents.</p>
 
-User-friendly Interface: Often provides a graphical user interface (GUI) with text editors similar to word processors.
-Content Creation and Editing: Tools to easily add, edit, and format text, images, videos, and other media.
-Workflow Management: Allows multiple users to collaborate, with roles and permissions (e.g., author, editor, publisher).
-Design Templates: Offers pre-designed templates or themes to quickly change the look and feel of a website without altering the content.
-SEO Tools: Built-in features to help optimize website content for search engines.
-Scalability: Can manage small personal blogs to large corporate websites.
-Examples of Popular CMS:
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Page content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-WordPress
-Joomla!
-Drupal
-Wix
-Shopify
-Introduction to HTML (Objectives, Structure, Tags, Attributes)
-HTML (Hypertext Markup Language): HTML is the standard markup language for creating web pages. It provides the basic structure of a web page, defining its content and layout. Without HTML, the World Wide Web would not exist.
+  <hr>
 
-Objectives of HTML:
+  <h3>6.4.3 Publishing and Hosting</h3>
+  <ul>
+    <li><b>Web Hosting:</b> Server storage space allocated on connected infrastructure to host website assets publicly.</li>
+    <li><b>Publishing:</b> Transferring local website code onto a web host using File Transfer Protocol (FTP) or modern continuous integration deployment pipelines.</li>
+  </ul>
 
-To define the structure of web content.
-To enable embedding text, images, multimedia, and other links or documents.
-To provide a means to prepare a structured document by using paragraphs, formatting, links, and lists.
-To allow web browsers to display the content of a web page.
-To serve as the foundation upon which other web technologies like CSS and JavaScript are built.
-Explanation:
+  <hr>
 
-<!DOCTYPE html>: Declares the document type and version of HTML (HTML5 in this case).
-<html>...</html>: The root element that encloses all other HTML elements.
-<head>...</head>: Contains meta-information about the HTML document, such as the title, character set, and links to stylesheets. This content is not directly visible on the web page.
-<title>...</title>: Sets the title that appears in the browser's title bar or tab.
-<body>...</body>: Contains the visible content of the web page, including text, images, links, etc.
-HTML Tags: Tags are the hidden keywords within a web page that define how your web browser must format and display the content. Most HTML tags come in pairs: an opening tag (e.g., <p>) and a closing tag (e.g., </p>). The content goes between these tags.
+  <h3>6.4.4 HTML Tags vs. Attributes</h3>
+  <ul>
+    <li><b>Tag:</b> Structural marker defining an element (e.g., <code>&lt;p&gt;</code>).</li>
+    <li><b>Attribute:</b> Key-value properties contained inside an opening tag that modify behavior or provide metadata (e.g., <code>&lt;a href="index.html" target="_blank"&gt;</code>).</li>
+  </ul>
 
-Examples of Tags:
+  <hr>
 
-<h1> to <h6>: Heading tags (from largest to smallest).
-<p>: Paragraph tag.
-<a>: Anchor tag for creating hyperlinks.
-<img>: Image tag (self-closing).
-<ul>, <ol>, <li>: Unordered list, ordered list, and list item tags.
-HTML Attributes: Attributes provide additional information about HTML elements. They are always specified in the opening tag and usually come in name/value pairs like name="value"
-In the <a> tag:
+  <h3>6.4.5 Basic Tags, Headings, Fonts, Paragraphs, &amp; Text Formatting</h3>
 
-href: Specifies the URL of the page the link goes to.
-target: Specifies where to open the linked document (e.g., _blank opens in a new tab).
-In the <img> tag:
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML Basic Elements &amp; Formatting&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#f4f4f4" text="#333333"&gt;
 
-src: Specifies the path to the image file.
-alt: Provides alternative text for the image, useful for accessibility if the image cannot be displayed.
-width and height: Define the dimensions of the image.
-Types of Tags in HTML
-HTML tags can be broadly categorized into two main types:
+  &lt;!-- Background Sound (Legacy Tag) --&gt;
+  &lt;!-- &lt;bgsound src="sound.mp3" loop="infinite"&gt; --&gt;
 
-1. Paired Tags (Container Tags):
+  &lt;!-- 6.4.6 Headings with ALIGN --&gt;
+  &lt;h1 align="center"&gt;Main Title (H1)&lt;/h1&gt;
+  &lt;h2 align="left"&gt;Subheading (H2)&lt;/h2&gt;
 
-These tags require both an opening tag and a closing tag. The content is placed between these two tags. They are also known as container tags because they "contain" the content they are formatting.
+  &lt;!-- 6.4.8 Paragraph &amp; 6.4.9 Line Break --&gt;
+  &lt;p&gt;This is a paragraph demonstrating formatting.&lt;br /&gt;This line starts right after a break.&lt;/p&gt;
 
-Examples:
+  &lt;!-- 6.4.10 Comment --&gt;
+  &lt;!-- This is an HTML comment --&gt;
 
-<p>...</p> (Paragraph)
-<h1>...</h1> (Heading)
-<b>...</b> (Bold text)
-<i>...</i> (Italic text)
-<div>...</div> (Division/Section)
-<span>...</span> (Inline section)
-2. Unpaired Tags (Empty Tags / Self-closing Tags):
+  &lt;!-- 6.4.7 Legacy FONT Tag --&gt;
+  &lt;font size="5" color="red" face="Arial"&gt;Custom Font Text&lt;/font&gt;&lt;br /&gt;
+  &lt;small&gt;Smaller Text&lt;/small&gt; | &lt;big&gt;Bigger Text&lt;/big&gt;
 
-These tags do not require a closing tag because they do not enclose any content. They are used to insert something into the document, like an image or a line break. They are also called empty tags or self-closing tags.
+  &lt;hr /&gt;
 
-Examples:
+  &lt;!-- 6.4.11 Inline Formatting --&gt;
+  &lt;p&gt;
+    &lt;b&gt;Bold&lt;/b&gt;, &lt;i&gt;Italic&lt;/i&gt;, &lt;u&gt;Underline&lt;/u&gt;, &lt;mark&gt;Highlighted&lt;/mark&gt;&lt;br /&gt;
+    Water Formula: H&lt;sub&gt;2&lt;/sub&gt;O | Algebra: X&lt;sup&gt;2&lt;/sup&gt; + Y&lt;sup&gt;2&lt;/sup&gt;&lt;br /&gt;
+    &lt;em&gt;Emphasized Text&lt;/em&gt;
+  &lt;/p&gt;
 
-<img> (Image)
-<br> (Line break)
-<hr> (Horizontal rule)
-<input> (Input field for forms)
-<meta> (Metadata)
-<link> (Link to external resources like CSS)
-Introduction to Cascading Style Sheet (CSS), Types and Uses
-CSS (Cascading Style Sheets): CSS is a stylesheet language used to describe the presentation of a document written in HTML or XML. It handles all the colors, fonts, and layouts for your HTML. CSS allows you to control the look and feel of your web pages, separating the content (HTML) from its visual presentation (CSS).
+  &lt;blockquote&gt;
+    "This is a blockquote block used for indented long citations."
+  &lt;/blockquote&gt;
 
-Uses of CSS:
+  &lt;pre&gt;
+  Preformatted Text
+    Preserves    Spaces 
+      And Line Breaks Automatically.
+  &lt;/pre&gt;
 
-Separation of Content and Presentation: HTML focuses on structure, while CSS focuses on styling, making code cleaner and easier to maintain.
-Consistent Styling: Apply a consistent look across multiple web pages from a single CSS file.
-Faster Page Load Times: By storing styles in external files, browsers can cache CSS, leading to faster loading for subsequent pages.
-Responsive Design: CSS enables websites to adapt their layout and appearance to different screen sizes and devices (desktops, tablets, mobile phones).
-Richer User Experience: Allows for advanced visual effects, animations, and interactive elements.
-Types of CSS:
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-There are three main ways to implement CSS in an HTML document:
+  <hr>
 
-1. Inline CSS:
+  <h3>6.4.12 Ordered Lists, 6.4.13 Unordered Lists, &amp; 6.4.14 Address/Links</h3>
 
-Inline CSS is used to apply a unique style to a single HTML element. The style rule is written directly inside the HTML opening tag using the style attribute. This method is generally not recommended for large-scale styling as it mixes content with presentation and makes maintenance difficult.
+  <pre><code>&lt;!-- 6.4.12 Ordered List --&gt;
+&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol type="A" start="3"&gt;
+  &lt;li value="3"&gt;Item C&lt;/li&gt;
+  &lt;li&gt;Item D&lt;/li&gt;
+&lt;/ol&gt;
 
-2. Internal CSS (Embedded CSS):
+&lt;!-- 6.4.13 Unordered &amp; Description Lists --&gt;
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul type="square"&gt;
+  &lt;li&gt;First Bullet&lt;/li&gt;
+  &lt;li&gt;Second Bullet&lt;/li&gt;
+&lt;/ul&gt;
 
-Internal CSS is used to define styles for a single HTML page.
-3. External CSS:
+&lt;h3&gt;Description List&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+&lt;/dl&gt;
 
-External CSS is the most common and recommended method for styling websites. All your CSS rules are written in a totally separate file with a .css extension. This external stylesheet is then linked to the HTML document using the <link> tag in the <head> section. This method is highly efficient for styling massive multi-page websites.
-</p>
-    </body>
+&lt;!-- 6.4.14 Address &amp; Anchor Hyperlinks --&gt;
+&lt;address&gt;
+  Written by Jane Doe.&lt;br /&gt;
+  Contact: &lt;a href="mailto:jane@example.com"&gt;jane@example.com&lt;/a&gt;
+&lt;/address&gt;
+
+&lt;!-- Hyperlink Examples --&gt;
+&lt;p&gt;
+  &lt;a href="https://www.wikipedia.org" target="_blank"&gt;Link to External Site&lt;/a&gt;&lt;br /&gt;
+  &lt;a href="#top"&gt;Link to Bookmark Anchor within Same Document&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+  <hr>
+
+  <h3>6.4.15 Tables</h3>
+  <pre><code>&lt;table border="1" width="100%" cellpadding="8" cellspacing="0"&gt;
+  &lt;thead style="background-color:#e0e0e0;"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;Alice Johnson&lt;/td&gt;
+      &lt;td&gt;Administrator&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+  <hr>
+
+  <h3>6.4.16 Forms</h3>
+  <pre><code>&lt;form action="/submit_form" method="POST"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br /&gt;
+  &lt;input type="text" id="username" name="username" /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label&gt;Gender:&lt;/label&gt;&lt;br /&gt;
+  &lt;input type="radio" id="male" name="gender" value="male" /&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;
+  &lt;input type="radio" id="female" name="gender" value="female" /&gt;
+  &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;input type="checkbox" id="subscribe" name="subscribe" value="newsletter" /&gt;
+  &lt;label for="subscribe"&gt;Subscribe to Newsletter&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for="comments"&gt;Comments:&lt;/label&gt;&lt;br /&gt;
+  &lt;textarea id="comments" name="comments" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <hr>
+
+  <h3>6.4.17 HTML5 Media Elements &amp; 6.4.18 HTML5 Graphics</h3>
+
+  <pre><code>&lt;!-- 6.4.17 Audio, Video, Embed --&gt;
+&lt;h3&gt;HTML5 Audio &amp; Video&lt;/h3&gt;
+&lt;video width="400" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4" /&gt;
+  &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+&lt;/audio&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- 6.4.18 Graphics: SVG &amp; Canvas --&gt;
+&lt;h3&gt;HTML5 SVG Graphic&lt;/h3&gt;
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
+&lt;/svg&gt;
+
+&lt;h3&gt;HTML5 Canvas Element&lt;/h3&gt;
+&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(10, 10, 150, 75);
+&lt;/script&gt;</code></pre>
+
+  <hr>
+
+  <h2>6.5 Cascading Style Sheets (CSS)</h2>
+
+  <h3>6.5.1 Introduction to CSS</h3>
+  <p><b>Cascading Style Sheets (CSS)</b> is a style sheet language used to describe the presentation, layout, colors, and fonts of a document written in HTML.</p>
+
+  <hr>
+
+  <h3>6.5.2 Inline CSS</h3>
+  <p>Applied directly within an element's HTML opening tag using the <code>style</code> attribute.</p>
+  <pre><code>&lt;p style="color: blue; font-size: 18px; text-align: center;"&gt;
+  This text is styled using Inline CSS.
+&lt;/p&gt;</code></pre>
+
+  <hr>
+
+  <h3>6.5.3 Embedded (Internal) CSS</h3>
+  <p>Defined within a <code>&lt;style&gt;</code> block placed inside the <code>&lt;head&gt;</code> section of an HTML document.</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+    .highlight-box {
+      background-color: #ffffcc;
+      border: 1px solid #e6e600;
+      padding: 10px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="highlight-box"&gt;Embedded CSS styled box.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <hr>
+
+  <h3>6.5.4 External CSS</h3>
+  <p>Styles are written in a standalone <code>.css</code> file and linked inside the HTML document's <code>&lt;head&gt;</code> using the <code>&lt;link&gt;</code> element.</p>
+
+  <h4>1. Style File (<code>styles.css</code>)</h4>
+  <pre><code>/* External Style Sheet */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+}</code></pre>
+
+  <h4>2. HTML Document Linking External File</h4>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" type="text/style" href="styles.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Page Styled via External CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    
+<h2><a href="chapter7.html">Go to chapter 7</a></h2>
+</body>
 </html>
